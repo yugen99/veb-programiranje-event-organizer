@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/style.css">
+
+    <title>Event organizer</title>
+  </head>
+  <body>
+    <div class="container-outer">
+      <div class="container-inner">
+        <button id="close-button" type="button" class="btn btn-dark"><strong>X</strong></button>
+        <form>
+          <div class="form-group">
+            <label for="chooseTitle">Title</label>
+            <input id="chooseTitle" required placeholder="Title" type="text" class="form-control" aria-describedby="emailHelp">
+            <small id="chooseTitleHelp" class="form-text text-muted">Write a title for your event.</small>
+          </div>
+          <div class="form-group">
+            <label for="chooseDate">Date</label>
+            <input id="chooseDate" type="date" required class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="chooseImage">Image URL</label>
+            <input id="chooseImage" type="text" class="form-control" placeholder="Image URL (Optional)" aria-describedby="basic-addon3">
+            <small id="chooseDescriptionHelp" class="form-text text-muted">If no image url is specified, default image will be used.</small>
+          </div>
+          <div class="form-group">
+            <label for="writeDescription">Description</label>
+            <textarea id="writeDescription" required class="form-control" aria-label="With textarea"></textarea>
+          </div>
+          <button id="accept-button" type="button" class="btn btn-primary"><strong>Accept</strong></button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="container">
+        <button id="addEvent" type="button" class="btn btn-dark"><strong>Add event</strong></button>
+        <small id="eventText" class="form-text text-muted">No events yet.</small>
+        <div class="card-group">
+          
+        </div>
+    </div>
+
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="jquery.editable.min.js"></script>
+    <!-- Custom JavaScript with jQuery -->
+    <script src="script.js"></script>
+  </body>
+</html>

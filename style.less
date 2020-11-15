@@ -1,0 +1,112 @@
+body {
+    background-color: #252525;
+    z-index: 0;
+}
+
+.crimsonButton {
+    background: crimson;
+    color: white;
+    border: none;
+}
+
+#addEvent {
+    .crimsonButton();
+    &:hover {
+        background: #a00e2b;
+    }
+}
+
+.container {
+    padding: 10px;
+    z-index: 1;
+    .card-group {
+        margin: 10px;
+        .col-sm-4 {
+            margin: 10px 0 10px 0;
+            animation: fadeInLeft 1s;
+            left: 0;
+            transition: left 1s;
+            &:hover {
+                cursor: pointer;
+                left: 10px;
+            }
+            .card {
+                #image-container {
+                    height: 258px;
+                    .custom-image {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover; // here
+                        -o-object-fit: cover;
+                    }
+                }
+                .card-footer {
+                    .btn-delete {
+                        .crimsonButton();
+                        &:hover {
+                            background: #a00e2b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container-outer {
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -10;
+    opacity: 0;
+    transition: all .5s;
+    display: none;
+    .container-inner {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #151515;
+        border-radius: 10px;
+        padding: 15px;
+        #close-button {
+            position: absolute;
+            margin: auto;
+            top: -10px;
+            right: -10px;
+            text-align: center;
+            border-radius: 50%;
+            background: crimson;
+            border: none;
+            z-index: 10;
+            &:hover {
+                background: #a00e2b;
+            }
+        }
+
+        .form-group {
+            label {
+                color: crimson;
+                text-shadow: 0 0 2px crimson;
+            }
+        }
+
+        #accept-button {
+            .crimsonButton();
+            &:hover {
+                background: #a00e2b;
+            }
+        }
+    }
+}
+
+@keyframes fadeInLeft {
+    from {opacity: 0; left: -100px;}
+    to {opacity: 1; left: 0;}
+}
